@@ -45,6 +45,8 @@ namespace Procesamiento_de_imagenes
             this.Pic_Img = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.AceptarFoto = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.SideBarContainer.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +56,7 @@ namespace Procesamiento_de_imagenes
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Img)).BeginInit();
             this.panel13.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideBarContainer
@@ -219,11 +222,34 @@ namespace Procesamiento_de_imagenes
             this.AceptarFoto.Text = "Aceptar Efecto Foto";
             this.AceptarFoto.UseVisualStyleBackColor = false;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Location = new System.Drawing.Point(229, 328);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(211, 49);
+            this.panel3.TabIndex = 23;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.button2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(-1, -9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(212, 67);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Histograma";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Foto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 483);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.LabelImg);
@@ -247,6 +273,7 @@ namespace Procesamiento_de_imagenes
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Img)).EndInit();
             this.panel13.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +296,7 @@ namespace Procesamiento_de_imagenes
         private System.Windows.Forms.PictureBox Pic_Img;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button AceptarFoto;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button2;
     }
 }

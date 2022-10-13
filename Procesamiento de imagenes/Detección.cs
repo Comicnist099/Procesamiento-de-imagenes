@@ -60,7 +60,6 @@ namespace Procesamiento_de_imagenes
             MiWebCam.Start();
 
 
-
         }
 
          private void Capturado(object sender, NewFrameEventArgs eventArgs)
@@ -77,7 +76,6 @@ namespace Procesamiento_de_imagenes
                 for (int i = 0; i < MyDispositivos.Count; i++)
                 {
                     FiltroCamara.Items.Add(MyDispositivos[i].Name.ToString());
-                    FiltroCamara.Text = MyDispositivos[0].ToString();
                 }
             }
             else

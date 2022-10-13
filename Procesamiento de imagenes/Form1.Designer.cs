@@ -35,6 +35,8 @@
             this.ImagenTimer = new System.Windows.Forms.Timer(this.components);
             this.Logo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.BTM_Manual = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.Video = new System.Windows.Forms.Button();
             this.ImageContent = new System.Windows.Forms.Panel();
@@ -55,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.ImageContent.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -81,7 +84,7 @@
             // 
             this.Logo.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Logo.ErrorImage")));
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(262, 55);
+            this.Logo.Location = new System.Drawing.Point(246, 57);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(640, 452);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,6 +93,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.ImageContent);
             this.panel2.Controls.Add(this.panel4);
@@ -100,11 +104,36 @@
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.BTM_Manual);
+            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel6.Location = new System.Drawing.Point(2, 117);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(211, 47);
+            this.panel6.TabIndex = 7;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // BTM_Manual
+            // 
+            this.BTM_Manual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.BTM_Manual.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BTM_Manual.ForeColor = System.Drawing.SystemColors.Control;
+            this.BTM_Manual.Image = ((System.Drawing.Image)(resources.GetObject("BTM_Manual.Image")));
+            this.BTM_Manual.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTM_Manual.Location = new System.Drawing.Point(-4, -5);
+            this.BTM_Manual.Name = "BTM_Manual";
+            this.BTM_Manual.Size = new System.Drawing.Size(212, 56);
+            this.BTM_Manual.TabIndex = 2;
+            this.BTM_Manual.Text = "Manual ";
+            this.BTM_Manual.UseVisualStyleBackColor = false;
+            this.BTM_Manual.Click += new System.EventHandler(this.BTM_Manual_Click);
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.Video);
             this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel7.Location = new System.Drawing.Point(2, 133);
+            this.panel7.Location = new System.Drawing.Point(3, 160);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(211, 47);
             this.panel7.TabIndex = 6;
@@ -130,7 +159,7 @@
             this.ImageContent.Controls.Add(this.panel5);
             this.ImageContent.Controls.Add(this.panel3);
             this.ImageContent.Controls.Add(this.Pan_Fotos);
-            this.ImageContent.Location = new System.Drawing.Point(-1, -1);
+            this.ImageContent.Location = new System.Drawing.Point(2, 0);
             this.ImageContent.MaximumSize = new System.Drawing.Size(217, 118);
             this.ImageContent.MinimumSize = new System.Drawing.Size(217, 45);
             this.ImageContent.Name = "ImageContent";
@@ -154,7 +183,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-4, -7);
+            this.button2.Location = new System.Drawing.Point(-4, -16);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(212, 67);
             this.button2.TabIndex = 2;
@@ -224,7 +253,7 @@
             // 
             this.panel4.Controls.Add(this.button1);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel4.Location = new System.Drawing.Point(-4, 182);
+            this.panel4.Location = new System.Drawing.Point(-3, 200);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(211, 49);
             this.panel4.TabIndex = 3;
@@ -314,7 +343,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.SideBarContainer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -323,6 +352,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.ImageContent.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -361,6 +391,8 @@
         private System.Windows.Forms.PictureBox btn_menu;
         private System.Windows.Forms.FlowLayoutPanel SideBarContainer;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button BTM_Manual;
     }
 }
 

@@ -82,6 +82,8 @@ namespace Procesamiento_de_imagenes
             // 
             // Pic_Camara
             // 
+            this.Pic_Camara.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Pic_Camara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Pic_Camara.Image = ((System.Drawing.Image)(resources.GetObject("Pic_Camara.Image")));
             this.Pic_Camara.Location = new System.Drawing.Point(478, 34);
             this.Pic_Camara.Name = "Pic_Camara";
@@ -249,7 +251,7 @@ namespace Procesamiento_de_imagenes
             this.Controls.Add(this.SideBarContainer);
             this.Controls.Add(this.Pic_Camara);
             this.Controls.Add(this.panel9);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Detección";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";

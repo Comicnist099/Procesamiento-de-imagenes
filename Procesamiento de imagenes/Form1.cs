@@ -235,5 +235,18 @@ namespace Procesamiento_de_imagenes
         {
 
         }
+
+        private void BTM_Manual_Click(object sender, EventArgs e)
+        {
+            Manual frm = new Manual();
+            frm.Show();
+            this.Hide();
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
