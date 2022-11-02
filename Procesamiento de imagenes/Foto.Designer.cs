@@ -47,6 +47,8 @@ namespace Procesamiento_de_imagenes
             this.AceptarFoto = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SideBarContainer.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,6 +73,7 @@ namespace Procesamiento_de_imagenes
             this.SideBarContainer.Name = "SideBarContainer";
             this.SideBarContainer.Size = new System.Drawing.Size(199, 561);
             this.SideBarContainer.TabIndex = 17;
+            this.SideBarContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.SideBarContainer_Paint);
             // 
             // panel1
             // 
@@ -171,6 +174,7 @@ namespace Procesamiento_de_imagenes
             this.ActivarFoto.TabIndex = 2;
             this.ActivarFoto.Text = "Subir Foto";
             this.ActivarFoto.UseVisualStyleBackColor = false;
+            this.ActivarFoto.Click += new System.EventHandler(this.ActivarFoto_Click);
             // 
             // LabelImg
             // 
@@ -189,6 +193,7 @@ namespace Procesamiento_de_imagenes
             this.FiltroImg.Name = "FiltroImg";
             this.FiltroImg.Size = new System.Drawing.Size(267, 23);
             this.FiltroImg.TabIndex = 20;
+            this.FiltroImg.SelectedIndexChanged += new System.EventHandler(this.FiltroImg_SelectedIndexChanged);
             // 
             // Pic_Img
             // 
@@ -221,6 +226,7 @@ namespace Procesamiento_de_imagenes
             this.AceptarFoto.TabIndex = 2;
             this.AceptarFoto.Text = "Aceptar Efecto Foto";
             this.AceptarFoto.UseVisualStyleBackColor = false;
+            this.AceptarFoto.Click += new System.EventHandler(this.AceptarFoto_Click);
             // 
             // panel3
             // 
@@ -244,6 +250,15 @@ namespace Procesamiento_de_imagenes
             this.button2.Text = "Histograma";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "Imagenes PNG|*.png|Imagenes BitMap|*.bmp|Imagenes JPG|*.jpg";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "Imagenes PNG|*.png|Imagenes BitMap|*.bmp|Imagenes JPG|*.jpg";
+            // 
             // Foto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -263,6 +278,7 @@ namespace Procesamiento_de_imagenes
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Foto";
             this.Load += new System.EventHandler(this.Foto_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Foto_Paint);
             this.SideBarContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -298,5 +314,8 @@ namespace Procesamiento_de_imagenes
         private System.Windows.Forms.Button AceptarFoto;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
